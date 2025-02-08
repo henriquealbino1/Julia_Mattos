@@ -11,24 +11,24 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: linear-gradient(to bottom, #ffc2d1, #ffd4e5, #ffe6f0);
+    background: linear-gradient(to bottom, #F2F2F2, white);
 }
 
 header {
     text-align: center;
-    padding: 35px;
+    padding: 90px;
 }
 
 header img {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    border: 3px solid #02000125;
+    border: 3px solid #0200010c;
 }
 
 header h1, h4 {
-    color: white;
-    text-shadow: 1px 1px 2px #00000031;
+    color: #717366;
+    text-shadow: 1px 1px 2px #00000033;
 }
 
 main {
@@ -45,7 +45,7 @@ main div {
     justify-content: center;
     width: 90%;
     max-width: 400px;
-    background-color: #8ab6d6;
+    background-color: #8ABFB5;
     color: white;
     font-size: 16px;
     font-weight: bold;
@@ -71,7 +71,7 @@ div a {
 
 .efeito:hover {
     transform: scale(1.05);
-    background-color: #6093c4;
+    background-color: #5BA67B;
 }
 
 /* Submenu */
