@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Psi. Júlia Mattos - Cuido da saúde feminina e materna. Agende sua consulta ou acesse nossas redes sociais.">
+    <meta name="author" content="Júlia Mattos">
+    <title>Psi. Júlia Mattos</title>
+    <link rel="shortcut icon" href="imagens/Favicon2.png" type="image/x-icon">
+    <style>
+        @charset "UTF-8";
+
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Corpo */
+body {
+    background: linear-gradient(to bottom, #ffc2d1, #ffd4e5, #ffe6f0); 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    padding: 35px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid rgba(2, 0, 1, 0.15);
+}
+
+header h1, header h4 {
+    color: #333;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteúdo Principal */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.efeito {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #8ab6d6;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, background-color 0.3s;
+    margin-bottom: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.efeito:hover {
+    transform: scale(1.05);
+    background-color: #6093c4;
+}
+
+.efeito img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.efeito a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #8ab6d6;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: calc(100% - 30px);
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.submenu a {
+    display: block;
+    color: white;
+    padding: 5px 0;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.submenu a:hover {
+    background-color: #6093c4;
+    border-radius: 5px;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 14px;
+    color: #333;
+}
+
+    </style>
+</head>
+<body onclick="closeSubmenu(event)">
+    <header>
+        <img src="imagens/perfil2.png" alt="Foto de Perfil de Júlia Mattos">
+        <h1>Psi. Júlia Mattos</h1>
+        <h4>Cuido da saúde feminina e materna</h4>
+    </header>
+
+    <main>
+        <!-- Botão WhatsApp -->
+        <div class="efeito">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
+            <a href="https://api.whatsapp.com/send/?phone=5533999245530&text&type=phone_number&app_absent=0" target="_blank">Agende uma Consulta</a>
+        </div>
+
+        <!-- Botão Instagram -->
+        <div class="efeito">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
+            <a href="https://www.instagram.com/psicologa.juliamattos/" target="_blank">Instagram</a>
+        </div>
+
+        <!-- Botão TikTok -->
+        <div class="efeito">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok">
+            <a href="https://www.tiktok.com/@psicologa.juliamattos" target="_blank">TikTok</a>
+        </div>
+
+        <!-- Botão Localização -->
+        <div class="efeito" onclick="toggleSubmenu(event)">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="Localização">
+            Localização
+            <div class="submenu" id="submenu">
+                <a href="https://goo.gl/maps/Exemplo1" target="_blank">📍 Local 1 - Clínica Mater</a>
+                <a href="https://goo.gl/maps/Exemplo2" target="_blank">📍 Local 2 - UnieClínica</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Psi. Júlia Mattos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function toggleSubmenu(event) {
+            event.stopPropagation();
+            const submenu = document.getElementById("submenu");
+            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
+        }
+
+        function closeSubmenu(event) {
+            const submenu = document.getElementById("submenu");
+            if (!event.target.closest('.efeito')) {
+                submenu.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
