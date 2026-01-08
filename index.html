@@ -3,61 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Julia_Mattos</title>
+
+    <title>Psicóloga Júlia Mattos | Saúde Feminina e Materna</title>
+    <meta name="description" content="Atendimento psicológico especializado em saúde feminina e materna. Agende sua consulta com a Psi. Júlia Mattos.">
+
     <link rel="shortcut icon" href="imagens/novalogo.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
-<body onclick="closeSubmenu(event)">
-    <header>
-        <img src="imagens/perfil 2.png" alt="foto">
+
+<body>
+    <header class="perfil">
+        <img src="imagens/perfil 2.png" alt="Foto profissional da psicóloga Júlia Mattos">
         <h1>Psi. Júlia Mattos</h1>
-        <h4>Cuido da saúde feminina e materna</h4>
+    <p>Cuido da saúde feminina e materna</p>
     </header>
 
     <main>
-        <div class="efeito">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="WhatsApp">
-            <a href="https://api.whatsapp.com/send/?phone=5533999245530&text&type=phone_number&app_absent=0" target="_blank">Agende uma Consulta</a>
-        </div>
+        <nav class="links">
 
-        <div class="efeito">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="Instagram">
-            <a href="https://www.instagram.com/psicologa.juliamattos/" target="_blank">Instagram</a>
-        </div>
+            <a class="botao" href="https://api.whatsapp.com/send/?phone=5533999245530"
+               target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" alt="">
+                Agende uma Consulta
+            </a>
 
-        <div class="efeito">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="TikTok">
-            <a href="https://www.tiktok.com/@psicologa.juliamattos?_t=ZM-8tjbnMcEXR8&_r=1" target="_blank">TikTok</a>
-        </div>
+            <a class="botao" href="https://www.instagram.com/psicologa.juliamattos/"
+               target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png" alt="">
+                Instagram
+            </a>
 
-        <!-- Botão de Localização -->
-        <div class="efeito" onclick="toggleSubmenu(event)">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="Localização">
-            Localização
+            <a class="botao" href="https://www.tiktok.com/@psicologa.juliamattos"
+               target="_blank" rel="noopener noreferrer">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/tiktok.png" alt="">
+                TikTok
+            </a>
+
+            <button class="botao botao-localizacao" id="btnLocalizacao">
+                <img src="https://img.icons8.com/ios-filled/50/ffffff/marker.png" alt="">
+                Localização
+            </button>
+
             <div class="submenu" id="submenu">
-                <a href="https://www.google.com/maps/place/Clínica+Mater+medicina+feminina/@-19.7896731,-42.1445987,17z/data=!3m1!4b1!4m6!3m5!1s0xba91e744dfc347:0xb01c652ed00441e7!8m2!3d-19.7896731!4d-42.1445987!16s%2Fg%2F11j3vbm_6y?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Local 1 - Clinica Mater</a>
-                <a href="https://www.google.com/maps/place/UNI+E+CLÍNICA+-+Clínica+Médica,+Exames+e+Odontológica/@-19.7892245,-42.1504446,15z/data=!3m1!4b1!4m6!3m5!1s0xba91d1203d2a33:0x6abb4edbdddf1dd7!8m2!3d-19.789245!4d-42.1401449!16s%2Fg%2F11j_q_3mpc?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" target="_blank">📍 Local 2 - UnieClínica</a>
-            </div>
-        </div>
+                <a href="https://www.google.com/maps/search/?api=1&query=Clinica+Mater+Medicina+Feminina+Caratinga+MG"
+                target="_blank" rel="noopener noreferrer">
+                📍 Clínica Mater
+             </a>
+
+                <a href="https://www.google.com/maps/search/?api=1&query=Uni+e+Clinica+Caratinga+MG"
+                  target="_blank" rel="noopener noreferrer">
+                 📍 UnieClínica
+             </a>
+</div>
+
+
+        </nav>
     </main>
 
     <footer>
         <p>&copy; 2025 Psi. Júlia Mattos. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        function toggleSubmenu(event) {
-            event.stopPropagation(); // Impede que o clique feche o submenu imediatamente
-            var submenu = document.getElementById("submenu");
-            submenu.style.display = submenu.style.display === "block" ? "none" : "block";
-        }
-
-        function closeSubmenu(event) {
-            var submenu = document.getElementById("submenu");
-            if (!event.target.closest('.menu-item')) {
-                submenu.style.display = "none";
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
